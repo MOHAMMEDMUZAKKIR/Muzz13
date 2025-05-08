@@ -1,1 +1,41 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
+public class Registration {
+
+	public static void main(String[] args) {
+		
+//		launch browser
+		WebDriver driver = new ChromeDriver();
+		
+//      Enter url
+		driver.get("https://tutorialsninja.com/demo/index.php?route=account/register");
+		
+//      Enter First name
+		driver.findElement(By.id("input-firstname")).sendKeys("Muzakkir");
+		
+//      Enter Last name
+		driver.findElement(By.id("input-lastname")).sendKeys("Mohammed");
+		
+//      Enter Email
+		driver.findElement(By.id("input-email")).sendKeys("muzzu11000@gmail.com");
+		
+//      Enter Telephone 
+		driver.findElement(By.id("input-telephone")).sendKeys("9990011100");
+		
+//      Enter Password 
+		driver.findElement(By.id("input-password")).sendKeys("123456");
+		
+//      Enter Confirm Password 
+		driver.findElement(By.id("input-confirm")).sendKeys("123456");
+		
+//		Check privacy policy box
+		driver.findElement(By.name("agree")).click();
+		
+//		click on the Registration button
+		
+	driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/div/input[2]")).click();
+	driver.close();
+	}
+}
