@@ -1,0 +1,45 @@
+package browsercommnds;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FirstURl {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver = new ChromeDriver();
+		
+		String URL = "https://tutorialsninja.com/demo/index.php?route=account/register";
+		driver.get(URL);
+		
+		//String title = driver.getTitle();//account register
+		
+		//System.out.print(title);
+		
+		//String curl = driver.getCurrentUrl();
+		//System.out.print(curl);
+		
+		//String URL1 = "https://tutorialsninja.com/demo/index.php?route=account/login";
+		//driver.get(URL1);
+		
+		//String regtitle = driver.getTitle();
+		//System.out.print(regtitle);
+		
+	//	String ps = driver.getPageSource();
+		//System.out.print(ps);
+		
+		String URL2 = "https://tutorialsninja.com/demo/index.php?route=common/home";
+		driver.get(URL2);
+		
+	    String title = driver.getTitle();
+	    
+	    int titlelenght=driver.getTitle().length();
+	    
+	    System.out.print(title);
+	    
+	    System.out.print(titlelenght);
+	    
+	   
+	}
+	
+}
